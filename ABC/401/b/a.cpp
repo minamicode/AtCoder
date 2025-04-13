@@ -25,3 +25,26 @@ int main() {
   
   cout << error << endl;
 }
+
+/* 解説より
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i,n) for (int i = 0; i < (n); ++i)
+
+int main() {
+  int n;
+  cin >> n;
+  bool login = false;
+  int ans = 0;
+  rep(i,n) {
+    string s;
+    cin >> s;
+    if (s == "login") login = true;
+    if (s == "logout") login = false;
+    // if (s == "public");
+    if (s == "private" && !login) ans++;
+  }
+  cout << ans << endl;
+  return 0;
+}
+*/
