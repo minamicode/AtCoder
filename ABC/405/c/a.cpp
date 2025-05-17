@@ -1,30 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-int main() {
-  int n;
-  cin >> n;
-  
-  vector<int> a(n);
-  for (int i = 0; i < n; i++) {
-    cin >> a.at(i);
-  }
-  
-  int64_t ans = 0;
-  
-  for (int i = 0; i < n - 1; i++) {
-    for (int j = 1; j < n; j++) {
-      if (i < j) {
-        ans += a.at(i) * a.at(j);
-      } else {
-        continue;
-      }
-    }
-  }
-  
-  cout << ans << endl;
-}
-
 /* 解説より
 #include <bits/stdc++.h>
 using namespace std;
