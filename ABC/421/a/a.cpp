@@ -1,0 +1,57 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int n;
+  cin >> n;
+
+  vector<string> s(n);
+  for (int i = 0; i < n; i++) {
+    cin >> s.at(i);
+  }
+
+  int x;
+  cin >> x;
+  int z = x - 1;
+
+  string y;
+  cin >> y;
+
+  bool ok = false;
+
+  for (int i = 0; i < n; i++) {
+    if (z == i && y == s.at(i)) {
+      ok = true;
+      break;
+    } else {
+      ok = false;
+    }
+  }
+
+  if (ok) {
+    cout << "Yes" << endl;
+  } else {
+    cout << "No" << endl;
+  }
+  
+  return 0;
+}
+
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+  vector<string> s(n+1);
+  for (int i = 1; i <= n; i++) {
+    cin >> s[i];
+  }
+
+  int x; string y;
+  cin >> x >> y;
+  if (s[x] == y) cout << "Yes" << endl;
+  else cout << "No" << endl;
+  return 0;
+}
+*/
