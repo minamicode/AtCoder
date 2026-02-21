@@ -1,32 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-  int n, m;
-  cin >> n >> m;
-  
-  set<int> a;
-  
-  for (int i = 0; i < n; i++) {
-    int l;
-    cin >> l;
-    
-    string x;
-    cin >> x;
-    
-    for (int j = 0; j < l; j++) {
-      if (a.find(x.at(j)) == a.end()) {
-        cout << x.at(j) << endl;
-        a.insert(x.at(j));
-        break;
-      } else {
-        cout << 0 << endl;
-        break;
-      }
-    }
-  }
-  return 0;
-}
-
 /*
 #include <bits/stdc++.h>
 using namespace std;
