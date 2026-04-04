@@ -1,3 +1,4 @@
+// TLE
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
@@ -31,3 +32,28 @@ int main() {
   
   return 0;
 }
+
+/*
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i,n) for (int i = 0; i < (n); ++i)
+
+int main() {
+  int Q;
+  cin >> Q;
+  priority_queue<int,vector<int>,greater<int>> q;
+  rep(qi,Q) {
+    int type, h;
+    cin >> type >> h;
+    if (type == 1) {
+      q.push(h);
+    } else {
+      while (q.size() && q.top() <= h) {
+        q.pop();
+      }
+    }
+    cout << q.size() << '\n';
+  }
+  return 0;
+}
+*/
