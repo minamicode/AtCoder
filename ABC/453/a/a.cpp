@@ -24,3 +24,35 @@ int main() {
   cout << endl;
   return 0;
 }
+
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  int n;
+  string s;
+  cin >> n >> s;
+  while (s[0] == 'o') {
+    s.erase(s.begin());
+  }
+  cout << s << endl;
+  return 0;
+}
+*/
+
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  int n;
+  string s;
+  cin >> n >> s;
+  while (s.size() > 0 && s[0] == 'o') {
+    s.erase(s.begin());
+  }
+  cout << s << endl;
+  return 0;
+}
+*/

@@ -1,31 +1,28 @@
+/*
 #include <bits/stdc++.h>
 using namespace std;
+#define rep(i,n) for (int i = 0; i < (n); ++i)
+using ll = long long;
+
 int main() {
   int n;
   cin >> n;
-  
   vector<int> l(n);
-  for (int i = 0; i < n; i++) {
-    cin >> l.at(i);
-  }
-  
-  double position = 0.5;
-  int cnt = 0;
-  
-  for (int i = 0; i < n; i++) {
-    if (position > 0) {
-      position -= l.at(i);
-      if (position < 0) {
-        cnt++;
-      }
-    } else if (position < 0) {
-      position += l.at(i);
-      if (position > 0) {
-        cnt++;
-      }
+  rep(i,n) cin >> l[i], l[i] <<= 1;
+
+  int ans = 0;
+  rep(s,1<<n) {
+    int now = 0;
+    ll x = 1;
+    rep(i,n) {
+      ll p = x;
+      if (s>>i&1) x += l[i];
+      else x -= l[i];
+      if (p/abs(p)*x < 0) now++;
     }
+    ans = max(ans, now);
   }
-  
-  cout << cnt << endl;
+  cout << ans << endl;
   return 0;
 }
+*/

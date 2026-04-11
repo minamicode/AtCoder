@@ -22,3 +22,25 @@ int main() {
   
   return 0;
 }
+
+/*
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i,n) for (int i = 0; i < (n); ++i)
+
+int main() {
+  int t, x;
+  cin >> t >> x;
+
+  int p = -x;
+  rep(i,t+1) {
+    int a;
+    cin >> a;
+    if (abs(a-p) >= x) {
+      cout << i << ' ' << a << endl;
+      p = a;
+    }
+  }
+  return 0;
+}
+*/
